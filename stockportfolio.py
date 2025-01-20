@@ -20,7 +20,7 @@ class StockPortfolio:
             print(f"Total Value: ${total_value:.2f}")
             print("-" * 40)
     def view_stock_price(self):
-        stock_symbol = input("Enter stock symbol").upper()
+        stock_symbol = input("Enter stock symbol: ").upper()
         stock = yf.Ticker(stock_symbol)
         stock_data = stock.history(period="1d")
         current_price = stock_data['Close'].iloc[0]  # Use iloc to access the first row
@@ -34,7 +34,7 @@ class StockPortfolio:
             print("4. Exit")
             choice = input("Enter your choice: ")
             if choice == '1':
-                stock_symbol = input("Enter stock symbol").upper()
+                stock_symbol = input("Enter stock symbol: ").upper()
                 shares = int(input("Enter number of shares: "))
                 self.update_portfolio(stock_symbol, shares)
             elif choice == '2':
