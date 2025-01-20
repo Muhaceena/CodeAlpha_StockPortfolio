@@ -34,7 +34,7 @@ class StockPortfolio:
             print("4. Exit")
             choice = input("Enter your choice: ")
             if choice == '1':
-                stock_symbol = input("Enter stock symbol (e.g., AAPL, GOOG): ").upper()
+                stock_symbol = input("Enter stock symbol").upper()
                 shares = int(input("Enter number of shares: "))
                 self.update_portfolio(stock_symbol, shares)
             elif choice == '2':
